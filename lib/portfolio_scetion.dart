@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PortfolioSection extends StatelessWidget {
@@ -8,7 +9,8 @@ class PortfolioSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
+      height: 1300,
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -36,7 +38,7 @@ class PortfolioSection extends StatelessWidget {
           // 🔹 Projects Grid
           LayoutBuilder(
             builder: (context, constraints) {
-              int crossAxisCount = constraints.maxWidth > 900 ? 3 : 2;
+              int crossAxisCount = constraints.maxWidth > 1000 ? 3 : 2;
               return GridView.builder(
                 shrinkWrap: true,
                 itemCount: projects.length,
@@ -64,8 +66,8 @@ class PortfolioSection extends StatelessWidget {
   }
 }
 
-// 🟢 Project Card Widget
-class _ProjectCard extends StatelessWidget {
+// 🟢 Project Card Widget with Read More Toggle
+class _ProjectCard extends StatefulWidget {
   final String title;
   final String description;
   final String imagePath;
@@ -77,16 +79,23 @@ class _ProjectCard extends StatelessWidget {
   });
 
   @override
+  State<_ProjectCard> createState() => _ProjectCardState();
+}
+
+class _ProjectCardState extends State<_ProjectCard> {
+  bool isExpanded = false;
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: const Color(0xFFF7F9FB),
         borderRadius: BorderRadius.circular(16),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             blurRadius: 8,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),
@@ -97,8 +106,8 @@ class _ProjectCard extends StatelessWidget {
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
             child: Image.asset(
-              imagePath,
-              height: 180,
+              widget.imagePath,
+              height: 280.h,
               width: double.infinity,
               fit: BoxFit.cover,
             ),
@@ -111,7 +120,7 @@ class _ProjectCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  title,
+                  widget.title,
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -119,13 +128,29 @@ class _ProjectCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  description,
+                  widget.description,
+                  maxLines: isExpanded ? 6 : 4,
+                  overflow: isExpanded ? TextOverflow.visible : TextOverflow.ellipsis,
                   style: GoogleFonts.poppins(
                     fontSize: 14,
                     color: Colors.black54,
                   ),
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
+                ),
+                const SizedBox(height: 4),
+                GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      isExpanded = !isExpanded;
+                    });
+                  },
+                  child: Text(
+                    isExpanded ? 'Read Less' : 'Read More',
+                    style: GoogleFonts.poppins(
+                      fontSize: 14,
+                      color: const Color(0xFF1BBF72),
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -139,19 +164,21 @@ class _ProjectCard extends StatelessWidget {
 // 🗂 Dummy Projects List
 final List<Map<String, String>> projects = [
   {
-    'title': 'Digital Marketing Agency Website',
-    'description': 'This is a portfolio site for a digital marketing agency. Built with clean sections and animations.',
+    'title': 'AssignmentAI',
+    'description':
+    'Introducing AssignmentAI: the ultimate document processing app. Upload your books, research papers, or academic papers, and our advanced AI will provide accurate, contextually relevant answers. Whether it\'s a child\'s book or a complex research paper, AssignmentAI ensures responses match the document\'s tone and context. Enjoy features like notifications, advanced profiling, secure payments, and smart search. Our recommendation system helps new users find the documents they need. With AssignmentAI, getting the right answers from your documents has never been easier.',
     'image': 'assets/WhatsApp Image 2025-06-25 at 5.17.47 PM.jpeg',
   },
   {
-    'title': 'Task Management App UI',
-    'description': 'Plan your tasks easily with this simple and powerful productivity mobile UI.',
-    'image': 'assets/WhatsApp Image 2025-06-25 at 5.17.47 PM.jpeg',
+    'title': 'My Football Career',
+    'description':
+    'Introducing My Football Career: your all-in-one solution for players, clubs, coaches, and agents. Clubs can post offers, and players and coaches can apply directly. Agents can post on behalf of clubs. Enjoy features like real-time chat, push notifications, advanced profiling, player statistics, and social links. Our map feature lets users find nearby clubs, and our booking system allows players to reserve football grounds. My Football Career streamlines connections and opportunities in the football world, making it easier than ever to advance your career.',
+    'image': 'assets/WhatsApp Image 2025-06-29 at 12.24.57 AM.jpeg',
   },
   {
     'title': 'E-commerce App UI',
     'description': 'An elegant shopping app UI for fashion products built with Flutter.',
-    'image': 'assets/WhatsApp Image 2025-06-25 at 5.17.47 PM.jpeg',
+    'image': 'assets/WhatsApp Image 2025-06-25 at 5.10.02 PM.jpeg',
   },
   {
     'title': 'Personal Portfolio Website',
