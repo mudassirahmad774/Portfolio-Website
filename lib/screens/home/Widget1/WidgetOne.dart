@@ -7,6 +7,7 @@ import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/utils/utils.dart';
 import 'package:portfolio/widgets/GlowingContainer.dart';
 import 'package:portfolio/widgets/MyText.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class WidgetOne extends StatelessWidget {
   WidgetOne({super.key});
@@ -176,43 +177,50 @@ class WidgetOne extends StatelessWidget {
                     ]),
               ),
             ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                SizedBox(
-                  height: 80,
-                  width: utils.desktopMode(context)
-                      ? utils.getScreenWidth(context) / 3
-                      : utils.getScreenWidth(context) / 2,
-                  child: ListView.builder(
-                    controller: widgetOneController.scrollController,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                        child: GlowingContainer(
-                          isAnimate: false,
-                          conatinerW: 70,
-                          conatinerH: 70,
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Image.asset("assets/images/fiverr.png"),
-                          ),
-                        ),
-                      );
-                    },
-                    itemCount: 100,
-                  ),
-                ),
-                MyText(
-                  text: " ...and more",
-                  isBold: false,
-                  letterSpacing: 2,
-                )
-              ],
-            ),
+            // Row(
+            //   crossAxisAlignment: CrossAxisAlignment.end,
+            //   children: [
+            //     SizedBox(
+            //       height: 80,
+            //       width: utils.desktopMode(context)
+            //           ? utils.getScreenWidth(context) / 3
+            //           : utils.getScreenWidth(context) / 2,
+            //       child: ListView.builder(
+            //         controller: widgetOneController.scrollController,
+            //         scrollDirection: Axis.horizontal,
+            //         itemBuilder: (context, index) {
+            //           return Padding(
+            //             padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            //             child: GlowingContainer(
+            //               isAnimate: false,
+            //               conatinerW: 70,
+            //               conatinerH: 70,
+            //               child: Padding(
+            //                 padding: const EdgeInsets.all(10.0),
+            //                 child: Image.asset("assets/images/fiverr.png"),
+            //               ),
+            //             ),
+            //           );
+            //         },
+            //         itemCount: 100,
+            //       ),
+            //     ),
+            //     MyText(
+            //       text: " ...adnd more",
+            //       isBold: false,
+            //       letterSpacing: 2,
+            //     )
+            //   ],
+            // ),
             InkWell(
-              onTap: () {},
+              onTap: () async {
+                const cvUrl = 'https://drive.google.com/file/d/1vwfsbK11OJSHXo15oy9tsG_ifBJcO2vj/view?usp=drivesdk '; // Replace with your real ID
+                if (await canLaunchUrlString(cvUrl)) {
+                  await launchUrlString(cvUrl, webOnlyWindowName: '_blank');
+                } else {
+                  throw 'Could not launch $cvUrl';
+                }
+              },
               onHover: (value) {},
               child: Row(
                 children: [

@@ -5,6 +5,7 @@ import 'package:portfolio/utils/colors.dart';
 import 'package:portfolio/utils/utils.dart';
 import 'package:portfolio/widgets/GlowingContainer.dart';
 import 'package:portfolio/widgets/MyText.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class WidgetFive extends StatelessWidget {
   WidgetFive({super.key});
@@ -27,7 +28,14 @@ class WidgetFive extends StatelessWidget {
               onHover: (value) {
                 controller.Hover(value, 2);
               },
-              onTap: () {},
+              onTap: () async {
+                const fiverrUrl = 'https://www.fiverr.com/sellers/mudassirahmed05/edit'; // Replace with your actual Fiverr profile URL
+                if (await canLaunchUrlString(fiverrUrl)) {
+                  await launchUrlString(fiverrUrl);
+                } else {
+                  throw 'Could not launch $fiverrUrl';
+                }
+              },
               child: Obx(
                     () => Container(
                   decoration: BoxDecoration(
@@ -85,7 +93,14 @@ class WidgetFive extends StatelessWidget {
               onHover: (value) {
                 controller.Hover(value, 1);
               },
-              onTap: () {},
+              onTap: () async {
+                const upworkUrl = 'https://www.upwork.com/freelancers/~01041ab8e69002164c'; // Replace with your actual Fiverr profile URL
+                if (await canLaunchUrlString(upworkUrl)) {
+                  await launchUrlString(upworkUrl);
+                } else {
+                  throw 'Could not launch $upworkUrl';
+                }
+              },
               child: Obx(
                     () => Container(
                   decoration: BoxDecoration(
@@ -150,7 +165,7 @@ class WidgetFive extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               MyText(
-                text: "Full Stack Web and App Developer",
+                text: "Full Stack Flutter Mobile Apps Developer",
                 color: Colors.green,
                 fontSize: 22,
                 letterSpacing: 2,
@@ -160,7 +175,7 @@ class WidgetFive extends StatelessWidget {
               ),
               MyText(
                 text:
-                "I build high-performance mobile and web apps using Flutter and Java making sure they run smoothly for millions of users. I also use smart technology to improve search and user experience. Working with different teams, I help bring new features to life while keeping everything fast and efficient!",
+                "I build high-performance mobile and web apps using Flutter making sure they run smoothly for millions of users. I also use smart technology to improve search and user experience. Working with different teams, I help bring new features to life while keeping everything fast and efficient!",
                 isBold: false,
                 fontSize: utils.MobileMode(context)?15:18,
                 letterSpacing: 1.5,
@@ -230,7 +245,7 @@ class WidgetFive extends StatelessWidget {
               text: TextSpan(
                 children: [
                   TextSpan(
-                      text: "+6 ",
+                      text: "+2 ",
                       style: TextStyle(
                           color: colors.getTextColor(),
                           letterSpacing: 2,
@@ -305,29 +320,32 @@ class WidgetFive extends StatelessWidget {
             color: colors.getBorderColor(), width: 0.3),
         color: colors.getConatinerColor(),
       ),
-      child: MyText(text: "Java"),
-    ),
-    Container(
-      alignment: Alignment.center,
-      height: 45,
-      width: 80,
-      decoration: BoxDecoration(
-        border: Border.all(
-            color: colors.getBorderColor(), width: 0.3),
-        color: colors.getConatinerColor(),
-      ),
-      child: MyText(text: "Kotlin"),
-    ),
-    Container(
-      alignment: Alignment.center,
-      height: 45,
-      width: 80,
-      decoration: BoxDecoration(
-        border: Border.all(
-            color: colors.getBorderColor(), width: 0.3),
-        color: colors.getConatinerColor(),
-      ),
       child: MyText(text: "Firebase"),
+    ),
+    Container(
+      alignment: Alignment.center,
+      height: 45,
+    //  width: 80,
+      decoration: BoxDecoration(
+        border: Border.all(
+            color: colors.getBorderColor(), width: 0.3),
+        color: colors.getConatinerColor(),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: MyText(text: "GoogleMaps"),
+      ),
+    ),
+    Container(
+      alignment: Alignment.center,
+      height: 45,
+      width: 80,
+      decoration: BoxDecoration(
+        border: Border.all(
+            color: colors.getBorderColor(), width: 0.3),
+        color: colors.getConatinerColor(),
+      ),
+      child: MyText(text: "API's"),
     ),
   ];
 }

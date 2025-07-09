@@ -3,10 +3,10 @@ import 'package:flutter/cupertino.dart';
 
 class utils{
 
-  static const String appName = "Portfolio";
-  static const String phone = "+92-339-7807000";
-  static const String email = "itsdevzam@gmail.com";
-  static const String website = "https://devzam.com";
+  static const String appName = "Website-Portfolio";
+  static const String phone = "+92-3359902693";
+  static const String email = "mudassirahmad774@gmail.com";
+  static const String website = "-";
   static bool isDarkTheme = true;
 
 

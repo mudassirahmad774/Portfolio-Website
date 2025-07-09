@@ -32,22 +32,22 @@ class WidgetTwo extends StatelessWidget {
               children: [
                 SectionTwoWid(
                   icon: FontAwesomeIcons.crown,
-                  num: "5",
+                  num: "2",
                   text: "Years Experience",
                 ),
                 SectionTwoWid(
                   icon: FontAwesomeIcons.desktop,
-                  num: "100",
+                  num: "20",
                   text: "Projects Completed",
                 ),
                 SectionTwoWid(
                   icon: FontAwesomeIcons.heart,
-                  num: "350",
+                  num: "20",
                   text: "Satisfied Clients",
                 ),
                 SectionTwoWid(
                   icon: FontAwesomeIcons.award,
-                  num: "18",
+                  num: "6",
                   text: "Award Winner",
                 ),
               ],
@@ -62,12 +62,12 @@ class WidgetTwo extends StatelessWidget {
                   children: [
                     SectionTwoWid(
                       icon: FontAwesomeIcons.crown,
-                      num: "5",
+                      num: "2",
                       text: "Years Experience",
                     ),
                     SectionTwoWid(
                       icon: FontAwesomeIcons.desktop,
-                      num: "100",
+                      num: "20",
                       text: "Projects Completed",
                     ),
                   ],
@@ -77,12 +77,12 @@ class WidgetTwo extends StatelessWidget {
                   children: [
                     SectionTwoWid(
                       icon: FontAwesomeIcons.heart,
-                      num: "350",
+                      num: "20",
                       text: "Satisfied Clients",
                     ),
                     SectionTwoWid(
                       icon: FontAwesomeIcons.award,
-                      num: "18",
+                      num: "6",
                       text: "Award Winner",
                     ),
                   ],
@@ -94,22 +94,22 @@ class WidgetTwo extends StatelessWidget {
               children: [
                 SectionTwoWid(
                   icon: FontAwesomeIcons.crown,
-                  num: "5",
+                  num: "2",
                   text: "Years Experience",
                 ),
                 SectionTwoWid(
                   icon: FontAwesomeIcons.desktop,
-                  num: "100",
+                  num: "20",
                   text: "Projects Completed",
                 ),
                 SectionTwoWid(
                   icon: FontAwesomeIcons.heart,
-                  num: "350",
+                  num: "20",
                   text: "Satisfied Clients",
                 ),
                 SectionTwoWid(
                   icon: FontAwesomeIcons.award,
-                  num: "18",
+                  num: "6",
                   text: "Award Winner",
                 ),
               ],

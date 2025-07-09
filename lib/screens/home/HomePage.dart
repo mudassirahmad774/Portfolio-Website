@@ -116,16 +116,17 @@ class _HomePageState extends State<HomePage> {
 
                         ///Bottom
                         SizedBox(height: 100,),
-                        Divider(height: 1,color: Colors.grey,),
+                        Divider(height: 1,color: Colors.white,),
                         SizedBox(height: 15),
-                        Image.asset("assets/logos/final-logo.png",height: 40,),
+                        Text("Mudassir Ahmad",style: TextStyle(color: Colors.green,letterSpacing: 2,fontWeight: FontWeight.bold),),
+                        // Image.asset("assets/logos/final-logo.png",height: 40,),
                         SizedBox(height: 15),
                         RichText(
                           textAlign: TextAlign.center,
                             text: TextSpan(
                           children: [
                             TextSpan(text: "© 2025 All Rights Reserved by ",style: TextStyle(color: colors.getTextColor(),letterSpacing: 2)),
-                            TextSpan(text: "DevZam",style: TextStyle(color: Colors.green,letterSpacing: 2,fontWeight: FontWeight.bold),),
+                            TextSpan(text: "Mudassir Ahmad",style: TextStyle(color: Colors.green,letterSpacing: 2,fontWeight: FontWeight.bold),),
                           ]
                         )),
                         SizedBox(height: 20,),

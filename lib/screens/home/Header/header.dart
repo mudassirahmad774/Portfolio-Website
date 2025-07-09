@@ -56,13 +56,14 @@ class MyHeader extends StatelessWidget {
                 SizedBox(
                   width: 15,
                 ),
+                Text("Mudassir Ahmad",style: TextStyle(color: Colors.green,letterSpacing: 2,fontWeight: FontWeight.bold),),
 
                 ///Main Logo
-                Image.asset(
-                  "assets/logos/final-logo.png",
-                  height: double.maxFinite,
-                  width: utils.TabletMode(context) ? 150 : 120,
-                ),
+                // Image.asset(
+                //   "assets/logos/final-logo.png",
+                //   height: double.maxFinite,
+                //   width: utils.TabletMode(context) ? 150 : 120,
+                // ),
               ],
             ),
 

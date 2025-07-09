@@ -40,7 +40,7 @@ class Widget3of1 extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 20.0, bottom: 20),
                 child: MyText(
                   text:
-                  "Over 300+ clients worldwide have placed their trust in us.",
+                  "Over 20+ clients worldwide have placed their trust in us.",
                   fontSize: utils.MobileMode(context) ? 30 : 40,
                 ),
               ),
@@ -108,7 +108,7 @@ class Widget3of1 extends StatelessWidget {
                             TextButton(
                                 onPressed: () {},
                                 child: MyText(
-                                  text: "itsdevzam@gmail.com",
+                                  text: "mudassirahmad774@gmail.com",
                                   color: colors.green,
                                 ))
                           ],
@@ -126,7 +126,7 @@ class Widget3of1 extends StatelessWidget {
                             TextButton(
                                 onPressed: () {},
                                 child: MyText(
-                                    text: "+92-3397807000",
+                                    text: "+92-3359902693",
                                     color: colors.green))
                           ],
                         ),
@@ -143,7 +143,7 @@ class Widget3of1 extends StatelessWidget {
                             TextButton(
                                 onPressed: () {},
                                 child: MyText(
-                                    text: "itsdevzam",
+                                    text: "mudassirahmad774",
                                     color: colors.green))
                           ],
                         ),
@@ -160,7 +160,7 @@ class Widget3of1 extends StatelessWidget {
                             TextButton(
                                 onPressed: () {},
                                 child: MyText(
-                                    text: "devzam", color: colors.green))
+                                    text: "mudassirahmad774", color: colors.green))
                           ],
                         ),
                         SizedBox(
@@ -234,7 +234,7 @@ class Widget3of1 extends StatelessWidget {
                           TextButton(
                               onPressed: () {},
                               child: MyText(
-                                text: "itsdevzam@gmail.com",
+                                text: "mudassirahmad@gmail.com",
                                 color: colors.green,
                               ))
                         ],
@@ -252,7 +252,7 @@ class Widget3of1 extends StatelessWidget {
                           TextButton(
                               onPressed: () {},
                               child: MyText(
-                                  text: "+92-3397807000",
+                                  text: "+92-3359902693",
                                   color: colors.green))
                         ],
                       ),
@@ -269,7 +269,7 @@ class Widget3of1 extends StatelessWidget {
                           TextButton(
                               onPressed: () {},
                               child: MyText(
-                                  text: "itsdevzam", color: colors.green))
+                                  text: "mudassirahmad774", color: colors.green))
                         ],
                       ),
                       SizedBox(
@@ -285,7 +285,7 @@ class Widget3of1 extends StatelessWidget {
                           TextButton(
                               onPressed: () {},
                               child: MyText(
-                                  text: "devzam", color: colors.green))
+                                  text: "mudassirahmad774", color: colors.green))
                         ],
                       ),
                       SizedBox(
