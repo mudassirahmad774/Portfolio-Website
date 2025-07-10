@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
 
                         ///Widget 6
                         SizedBox(height: 15),
-                        WidgetSix(),
+                      //  WidgetSix(),
 
                         ///Widget 7
                         SizedBox(height: 15),
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
 
                         ///Widget 8
                         SizedBox(height: 15),
-                        WidgetEight(),
+                       // WidgetEight(),
 
                         ///Widget 9
                         SizedBox(height: 50),
@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage> {
                         ///Bottom
                         SizedBox(height: 100,),
                         Divider(height: 1,color: Colors.white,),
-                        SizedBox(height: 15),
+                        SizedBox(height: 30F),
                         Text("Mudassir Ahmad",style: TextStyle(color: Colors.green,letterSpacing: 2,fontWeight: FontWeight.bold),),
                         // Image.asset("assets/logos/final-logo.png",height: 40,),
                         SizedBox(height: 15),
@@ -129,7 +129,7 @@ class _HomePageState extends State<HomePage> {
                             TextSpan(text: "Mudassir Ahmad",style: TextStyle(color: Colors.green,letterSpacing: 2,fontWeight: FontWeight.bold),),
                           ]
                         )),
-                        SizedBox(height: 20,),
+                        SizedBox(height: 60,),
                         ///End
                       ],
                     ),

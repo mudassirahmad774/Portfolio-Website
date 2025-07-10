@@ -14,7 +14,7 @@ class bindings extends Bindings{
     Get.put(HeaderController());
     Get.put(WidFourController());
     Get.put(WidgetFiveController());
-    Get.put(WidgetSixController());
+  //  Get.put(WidgetSixController());
     Get.put(WidgetSevenController());
     Get.put(WidgetEightController());
     Get.put(WidgetOneController());

@@ -129,11 +129,11 @@ class WidgetSeven extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Sectionsevenwid(title: "Front-End",detail: "HTML, CSS, Flutter, XML",),
-              Sectionsevenwid(title: "Back-End",detail: "Laravel, PHP, Firebase",),
-              Sectionsevenwid(title: "Databases",detail: "MySQL, Firebase, MongoDB",),
-              Sectionsevenwid(title: "Tools & Platforms",detail: "Git, WHM Panel, Cpanel",),
-              Sectionsevenwid(title: "Others",detail: "Wordpress, Playconsole, Appstore",),
+              Sectionsevenwid(title: "Frameworks & Languages",detail: "Slack and Jira and code Host on GitHub",),
+              Sectionsevenwid(title: "DEVELOPMENT TOOLS ",detail: "AndroidStudio ‑ VSCode ‑ Cursor",),
+              Sectionsevenwid(title: "Architecture",detail: "MVC,MVVM Architecture and State Management – Provider and Riverpod",),
+              Sectionsevenwid(title: "Miscellaneous",detail: " Window,LATEXOverleaf, Microsoft Office, Git‑GitHub",),
+              Sectionsevenwid(title: "SoftSkills ",detail: "TimeManagement,Teamwork,Problem‑solving,Documentation,EngagingPresentation.",),
             ],
           ),
         ),

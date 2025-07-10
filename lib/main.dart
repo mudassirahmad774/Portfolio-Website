@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
             seedColor: colors.bgLight, brightness: Brightness.light),
         useMaterial3: true,
       ),
+      themeMode: ThemeMode.light,
       // darkTheme: ThemeData(
       //   brightness: Brightness.dark,
       //   scaffoldBackgroundColor: colors.bgDark,

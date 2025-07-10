@@ -13,7 +13,7 @@ class WidgetThree extends StatelessWidget {
       children: [
         Widget3of1(),
         SizedBox(width: 15),
-        Widget3of2(),
+       // Widget3of2(),
       ],
     )
         : SizedBox(
@@ -22,7 +22,7 @@ class WidgetThree extends StatelessWidget {
         children: [
           SizedBox(child: Widget3of1()),
           SizedBox(height: 15),
-          Widget3of2(),
+        //  Widget3of2(),
         ],
       ),
     );

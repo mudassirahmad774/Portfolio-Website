@@ -15,87 +15,212 @@ class Widget3of1 extends StatelessWidget {
         child: GlowingContainer(
           conatinerH: utils.MobileMode(context) ? 700 : 400,
           isAnimate: false,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  FaIcon(FontAwesomeIcons.circleDot, color: colors.green),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  MyText(
-                    text: "Our Valued Customers",
-                    color: colors.green,
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20.0, bottom: 20),
-                child: MyText(
+          child: Padding(
+            padding: EdgeInsets.all(12),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    FaIcon(FontAwesomeIcons.circleDot, color: colors.green),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    MyText(
+                      text: "Our Valued Customers",
+                      color: colors.green,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                MyText(
                   text:
                   "Over 20+ clients worldwide have placed their trust in us.",
                   fontSize: utils.MobileMode(context) ? 30 : 40,
                 ),
-              ),
-
-              ///Fiverr pro and coantact
-              utils.MobileMode(context)
-                  ? Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  GlowingContainer(
-                    conatinerH: 150,
-                    conatinerW: 250,
-                    isAnimate: true,
-                    glowLength: 50,
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                            "assets/images/fiverr_choice.jpg")),
-                  ),
-                  // Container(
-                  //   alignment: Alignment.center,
-                  //   width: 200,
-                  //   height: 200,
-                  //   child: Stack(
-                  //     alignment: Alignment.center,
-                  //     children: [
-                  //       CircleAvatar(
-                  //         backgroundImage: AssetImage(
-                  //             "assets/logos/sm-logo.png"),
-                  //         radius: 20,
-                  //       ),
-                  //       CustomPaint(
-                  //         painter:
-                  //             CircleOutline(radius: 40),
-                  //       ),
-                  //       CustomPaint(
-                  //         painter:
-                  //             CircleOutline(radius: 60),
-                  //       ),
-                  //     ],
-                  //   ),
-                  // ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30.0, top: 20),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                SizedBox(
+                  height: 10,
+                ),
+                ///Fiverr pro and coantact
+                utils.MobileMode(context)
+                    ? Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    GlowingContainer(
+                      conatinerH: 150,
+                      conatinerW: 250,
+                      isAnimate: true,
+                      glowLength: 50,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                              "assets/images/fiverr_choice.jpg")),
+                    ),
+                    // Container(
+                    //   alignment: Alignment.center,
+                    //   width: 200,
+                    //   height: 200,
+                    //   child: Stack(
+                    //     alignment: Alignment.center,
+                    //     children: [
+                    //       CircleAvatar(
+                    //         backgroundImage: AssetImage(
+                    //             "assets/logos/sm-logo.png"),
+                    //         radius: 20,
+                    //       ),
+                    //       CustomPaint(
+                    //         painter:
+                    //             CircleOutline(radius: 40),
+                    //       ),
+                    //       CustomPaint(
+                    //         painter:
+                    //             CircleOutline(radius: 60),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30.0, top: 20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              FaIcon(
+                                FontAwesomeIcons.envelope,
+                                color: colors.getIconColor(),
+                                size: 20,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: MyText(
+                                    text: "mudassirahmad774@gmail.com",
+                                    color: colors.green,
+                                  ))
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            children: [
+                              FaIcon(FontAwesomeIcons.whatsapp,
+                                  color: colors.getIconColor(), size: 20),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: MyText(
+                                      text: "+92-3359902693",
+                                      color: colors.green))
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            children: [
+                              FaIcon(FontAwesomeIcons.github,
+                                  color: colors.getIconColor(), size: 20),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: MyText(
+                                      text: "mudassirahmad774",
+                                      color: colors.green))
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                          Row(
+                            children: [
+                              FaIcon(FontAwesomeIcons.linkedin,
+                                  color: colors.getIconColor(), size: 20),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: MyText(
+                                      text: "mudassirahmad774", color: colors.green))
+                            ],
+                          ),
+                          SizedBox(
+                            height: 5,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 50,
+                    )
+                  ],
+                )
+                    : Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      width: 20,
+                    ),
+                    GlowingContainer(
+                      conatinerH:
+                      utils.getScreenWidth(context) > 1400 ? 150 : 120,
+                      conatinerW:
+                      utils.getScreenWidth(context) > 1400 ? 250 : 200,
+                      isAnimate: true,
+                      glowLength: 50,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                              "assets/images/fiverr_choice.jpg")),
+                    ),
+                    // Container(
+                    //   alignment: Alignment.center,
+                    //   width: 200,
+                    //   height: 200,
+                    //   child: Stack(
+                    //     alignment: Alignment.center,
+                    //     children: [
+                    //       CircleAvatar(
+                    //         backgroundImage: AssetImage(
+                    //             "assets/logos/sm-logo.png"),
+                    //         radius: 20,
+                    //       ),
+                    //       CustomPaint(
+                    //         painter:
+                    //             CircleOutline(radius: 40),
+                    //       ),
+                    //       CustomPaint(
+                    //         painter:
+                    //             CircleOutline(radius: 60),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             FaIcon(
                               FontAwesomeIcons.envelope,
@@ -108,7 +233,7 @@ class Widget3of1 extends StatelessWidget {
                             TextButton(
                                 onPressed: () {},
                                 child: MyText(
-                                  text: "mudassirahmad774@gmail.com",
+                                  text: "mudassirahmad@gmail.com",
                                   color: colors.green,
                                 ))
                           ],
@@ -143,8 +268,7 @@ class Widget3of1 extends StatelessWidget {
                             TextButton(
                                 onPressed: () {},
                                 child: MyText(
-                                    text: "mudassirahmad774",
-                                    color: colors.green))
+                                    text: "mudassirahmad774", color: colors.green))
                           ],
                         ),
                         SizedBox(
@@ -168,137 +292,13 @@ class Widget3of1 extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 50,
-                  )
-                ],
-              )
-                  : Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    width: 20,
-                  ),
-                  GlowingContainer(
-                    conatinerH:
-                    utils.getScreenWidth(context) > 1400 ? 150 : 120,
-                    conatinerW:
-                    utils.getScreenWidth(context) > 1400 ? 250 : 200,
-                    isAnimate: true,
-                    glowLength: 50,
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.asset(
-                            "assets/images/fiverr_choice.jpg")),
-                  ),
-                  // Container(
-                  //   alignment: Alignment.center,
-                  //   width: 200,
-                  //   height: 200,
-                  //   child: Stack(
-                  //     alignment: Alignment.center,
-                  //     children: [
-                  //       CircleAvatar(
-                  //         backgroundImage: AssetImage(
-                  //             "assets/logos/sm-logo.png"),
-                  //         radius: 20,
-                  //       ),
-                  //       CustomPaint(
-                  //         painter:
-                  //             CircleOutline(radius: 40),
-                  //       ),
-                  //       CustomPaint(
-                  //         painter:
-                  //             CircleOutline(radius: 60),
-                  //       ),
-                  //     ],
-                  //   ),
-                  // ),
-                  SizedBox(
-                    width: 30,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          FaIcon(
-                            FontAwesomeIcons.envelope,
-                            color: colors.getIconColor(),
-                            size: 20,
-                          ),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          TextButton(
-                              onPressed: () {},
-                              child: MyText(
-                                text: "mudassirahmad@gmail.com",
-                                color: colors.green,
-                              ))
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        children: [
-                          FaIcon(FontAwesomeIcons.whatsapp,
-                              color: colors.getIconColor(), size: 20),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          TextButton(
-                              onPressed: () {},
-                              child: MyText(
-                                  text: "+92-3359902693",
-                                  color: colors.green))
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        children: [
-                          FaIcon(FontAwesomeIcons.github,
-                              color: colors.getIconColor(), size: 20),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          TextButton(
-                              onPressed: () {},
-                              child: MyText(
-                                  text: "mudassirahmad774", color: colors.green))
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        children: [
-                          FaIcon(FontAwesomeIcons.linkedin,
-                              color: colors.getIconColor(), size: 20),
-                          SizedBox(
-                            width: 5,
-                          ),
-                          TextButton(
-                              onPressed: () {},
-                              child: MyText(
-                                  text: "mudassirahmad774", color: colors.green))
-                        ],
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    width: 50,
-                  ),
-                ],
-              ),
-            ],
+                    SizedBox(
+                      width: 50,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ));
   }

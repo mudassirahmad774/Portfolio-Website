@@ -214,7 +214,7 @@ class WidgetOne extends StatelessWidget {
             // ),
             InkWell(
               onTap: () async {
-                const cvUrl = 'https://drive.google.com/file/d/1vwfsbK11OJSHXo15oy9tsG_ifBJcO2vj/view?usp=drivesdk '; // Replace with your real ID
+                const cvUrl = 'https://drive.google.com/file/d/1EZFZMIs-uGR2y1WYguxM6A4wjUpaOmZF/view?usp=drive_link'; // Replace with your real ID
                 if (await canLaunchUrlString(cvUrl)) {
                   await launchUrlString(cvUrl, webOnlyWindowName: '_blank');
                 } else {

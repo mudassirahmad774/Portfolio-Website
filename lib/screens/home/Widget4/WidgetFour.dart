@@ -13,7 +13,7 @@ class WidgetFour extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return GlowingContainer(
-        conatinerH: utils.desktopMode(context)?870:(utils.getScreenWidth(context)>750?1200:2200),
+        conatinerH: utils.desktopMode(context)?900:(utils.getScreenWidth(context)>750?1200:2200),
         isAnimate: false,
         child: SizedBox(
 
@@ -126,38 +126,38 @@ class WidgetFour extends StatelessWidget {
   }
   static List<Map<String,dynamic>> listData = [
     {
-      "icon":FontAwesomeIcons.code,
+      "icon": 'assets/images/WhatsApp Image 2025-07-10 at 6.51.43 PM.jpeg',
       "title":"Web Development",
       "desc":"Building responsive and modern websites using cutting-edge technologies."
     },
     {
-      "icon":FontAwesomeIcons.mobileScreen,
+      "icon": 'assets/images/WhatsApp Image 2025-07-10 at 6.51.43 PM.jpeg',
       "title":"Mobile Application Development",
       "desc":"Creating user-centered designs that provide intuitive and engaging user experiences."
     },
     {
-      "icon":FontAwesomeIcons.wordpress,
+      "icon": 'assets/images/WhatsApp Image 2025-07-10 at 6.51.43 PM.jpeg',
       "title":"WordPress Development",
       "desc":"Designing and developing tailor-made WordPress themes and plugins for unique functionality and branding."
     },
     {
-      "icon":FontAwesomeIcons.appStore,
+      "icon": 'assets/images/WhatsApp Image 2025-07-10 at 6.51.43 PM.jpeg',
       "title":"Uploading Appstore",
       "desc":"Ensuring the app is fully functional, optimized for performance, and meets Apple’s UI/UX guidelines."
     },
     {
-      "icon":FontAwesomeIcons.facebook,
+      "icon": 'assets/images/WhatsApp Image 2025-07-10 at 6.51.43 PM.jpeg',
       "title":"Facebook Ads",
       "desc":"Reach the right audience based on demographics, interests, behaviors, and location."
     },
     {
-      "icon":FontAwesomeIcons.laravel,
+      "icon": 'assets/images/WhatsApp Image 2025-07-10 at 6.51.43 PM.jpeg',
       "title":"Laravel and cPanel/WHM",
       "desc":"Hosting a Laravel application using cPanel/WHM simplifies the deployment and management process."
     },
   ];
   List<Widget> sec4Wid = List.generate(listData.length, (index){
-    return SectionFourWid(icon: listData[index]['icon'], title: listData[index]['title'], desc: listData[index]['desc'],privateNum: index+1,);
+    return SectionFourWid(imagePath: listData[index]['icon'], title: listData[index]['title'], desc: listData[index]['desc'],privateNum: index+1,);
   });
 }
 
